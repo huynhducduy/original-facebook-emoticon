@@ -14,7 +14,7 @@
   
   "content_scripts": [
   {
-	"matches": ["*://*.facebook.com/*"],
+	"matches": ["*://*.facebook.com/*","*://*.messenger.com/*"],
     "js": ["jquery.min.js","script.js"]
   }
 ]

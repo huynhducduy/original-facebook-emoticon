@@ -1,6 +1,13 @@
 $(document).ready(function() {
+	var url = window.location.href;
 	function ledEmoticon () {
-	  var spans = $('div.conversation div div div div div div div div div div span span span:not(.accessible_elem)').toArray();
+	if (url.indexOf('facebook.com')) {
+		var spans = $('div.conversation div div div div div div div div div div span span span:not(.accessible_elem)').toArray();
+	}
+	if (url.indexOf('messenger.com')) {
+		var spans = $('body div div div div div div div div div div div div div div div div div div div span').toArray();
+	}
+	  
 	  var emoticons = {
 		':v' : '<span class="emoticon emoticon_pacman" aria-hidden="true"></span>',
 		':V'  : '<span class="emoticon emoticon_pacman" aria-hidden="true"></span>',
