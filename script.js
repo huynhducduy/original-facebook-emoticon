@@ -30,8 +30,13 @@ $(document).ready(function() {
 				   emoticons[match] :
 				   match;
 		  });
-		  span.html(spanHtml);
+		  if (spanHtml != span.html()) {
+			span.html(spanHtml);
+		  }
 	  });
+	  
+	  $("span[title='<(\")']").has('img').html('').attr('class','emoticon emoticon_penguin').attr('aria-hidden',true);
+	  $('span').has("img[title='<(\")']").html('').attr('class','emoticon emoticon_penguin').attr('aria-hidden',true);
 	}
 
 	setInterval(ledEmoticon, 1000);
