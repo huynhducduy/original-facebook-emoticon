@@ -36,7 +36,7 @@ $(document).ready(function() {
 	  });
 	  
 	  $("span[title='<(\")']").has('img').html('').attr('class','emoticon emoticon_penguin').attr('aria-hidden',true);
-	  $('span').has("img[title='<(\")']").html('').attr('class','emoticon emoticon_penguin').attr('aria-hidden',true);
+	  $('span').has("img[title='<(\")']").find('img').replaceWith('<span class="emoticon emoticon_penguin" aria-hidden="true"></span>')
 	}
 
 	setInterval(ledEmoticon, 1000);
