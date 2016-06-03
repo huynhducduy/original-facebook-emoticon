@@ -1,10 +1,10 @@
 $(document).ready(function() {
 	var url = window.location.href;
 	function ledEmoticon () {
-	if (url.indexOf('facebook.com')) {
+	if (url.indexOf('facebook.com') != -1) {
 		var spans = $('div.conversation div div div div div div div div div div span span span:not(.accessible_elem)').toArray();
 	}
-	if (url.indexOf('messenger.com')) {
+	if (url.indexOf('messenger.com') != -1) {
 		var spans = $('body div div div div div div div div div div div div div div div div div div div span').toArray();
 	}
 	  
